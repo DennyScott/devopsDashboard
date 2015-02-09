@@ -1,24 +1,57 @@
-<template name="home">
+<template name="main">
 
 <div class="dashboard">
 		
-		{{> wideMetrobox}}
-		{{> metrobox}}
-		{{> metrobox}}
+		{{#with pullRequest}}
+			{{> metrobox}}
+		{{/with}}
+		{{#with totalStoryPoints}}
+			{{> metrobox}}
+		{{/with}}
+		{{#with currentSprintsStoryPoints}}
+			{{> metrobox}}
+		{{/with}}
+		{{#with lastBugIssued}}
+			{{> metrobox}}
+		{{/with}}
 
 		
-		{{> metrobox}}
-		{{> metrobox}}
+		{{#with lastBugCompleted}}
+			{{> metrobox}}
+		{{/with}}
+		{{#with data}}
+			{{> metrobox}}
+		{{/with}}
+		{{#with data}}
 		{{> largeMetrobox}}
-		{{> twoStackWideMetrobox}}
+		{{/with}}
 
+		{{#with data}}
+		{{> twoStackWideMetrobox}}
+		{{/with}}
+
+		{{#with data}}
 		{{> largeMetrobox}}
-		{{> metrobox}}
-		{{> metrobox}}
-		{{> metrobox}}
-		{{> metrobox}}
+		{{/with}}
+		{{#with data}}
+			{{> metrobox}}
+		{{/with}}
+		{{#with data}}
+			{{> metrobox}}
+		{{/with}}
+		{{#with data}}
+			{{> metrobox}}
+		{{/with}}
+		{{#with data}}
+			{{> metrobox}}
+		{{/with}}
 
 		 
-		{{> wideMetrobox}}
+		{{#with data}}
+			{{> metrobox}}
+		{{/with}}
+		{{#with data}}
+			{{> metrobox}}
+		{{/with}}
 	</div>
 </template>

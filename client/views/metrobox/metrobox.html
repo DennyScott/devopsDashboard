@@ -1,9 +1,29 @@
 <template name="metrobox">
 	<div class="metrobox col-md-2 quarter">
-	<div class="inner-metro">
-		<div class="content">
-			Hello
-		</div>
+		<div class="inner-metro {{color}}">
+			<div class="content">
+					
+					 <div class="title">
+						{{title}}
+					</div>
+					{{#if author}}
+					<div class="author">
+						<img src="{{avatar}}" class="img-circle avatar-img"> 
+						<div class="author-name">{{author}}</div>
+					</div> 
+					{{/if}}
+					
+					{{#if chart}}
+					<div class="ct-chart chart">
+						<div class="chart-description">{{description}}</div>
+					</div>
+						{{else}}
+					<div class="description">
+						{{description}} {{projectName}}
+					</div>
+					{{/if}}
+
+				</div>
 		</div>
 	</div>
 </template>
